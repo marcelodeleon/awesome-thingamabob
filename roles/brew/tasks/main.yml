@@ -19,3 +19,37 @@
   homebrew_tap:
     tap: "neovim/homebrew-neovim"
     state: present
+
+- name: Update brew daily
+  cron: name="brew autoupdate" special_time="daily"
+        job="/usr/local/bin/brew update"
+
+- name: Cleanup brew
+  cron: name="brew cleanup" special_time="monthly"
+        job="/usr/local/bin/brew cleanup"
+
+- name: Cleanup brew cask
+  cron: name="brew cask cleanup" special_time="monthly"
+        job="/usr/local/bin/brew cask cleanup"
+
+- name: Install packages from Homebrew
+  homebrew: name={{ item }} state=present
+  with_items:
+    - tree
+    - python2
+    - gnupg
+    - antigen
+    - neovim
+    - tmux
+
+- name: Install packages from Homebrew Cask
+  ignore_errors: yes
+  homebrew_cask: name={{ item }} state=present
+  with_items:
+    - google-chrome
+    - iterm2
+    - slack
+    - karabiner-elements
+    - kap
+    - whatsapp
+    - zoomus
