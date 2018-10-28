@@ -1,0 +1,6 @@
+---
+# Setting up Awesome Thingamabob dev machine!
+
+- hosts: localhost
+  roles:
+    - brew
