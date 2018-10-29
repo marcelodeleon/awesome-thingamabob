@@ -12,6 +12,7 @@ Run ```git --version``` to check. If git is missing, Xcode will prompt an instal
   * Neovim cask
 - Dotfiles
   - Clone repo
+  - Remove all cobalt2 theme configurations
   - symlink dotfiles
     - neovim
     - zsh
@@ -19,7 +20,15 @@ Run ```git --version``` to check. If git is missing, Xcode will prompt an instal
     - any other shell dotfile
 - Things still to install
   - Antigen
-  - Alfred
+  * Alfred
+  * Spotify
+- Theme!
+  - Install https://draculatheme.com
+    - zsh
+    - iTerm2
+    - vim
+    - Slack
+    - Alfred
 
 
 - After main installation is ready

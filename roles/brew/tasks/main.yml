@@ -46,6 +46,8 @@
   ignore_errors: yes
   homebrew_cask: name={{ item }} state=present
   with_items:
+    - alfred
+    - spotify
     - google-chrome
     - iterm2
     - slack
