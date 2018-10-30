@@ -18,16 +18,16 @@ Run ```git --version``` to check. If git is missing, Xcode will prompt an instal
 - Node
 - Ruby
 - Dev env
-  - Install zsh with oh-my-zsh
-  - neovim
+  * Install zsh with antigen
+  * neovim
   * tmux
-  - Antigen
+  * Antigen
 - Dotfiles
-  - Clone repo
+  * Clone repo
   - Remove all cobalt2 theme configurations
   - symlink dotfiles
     - neovim
-    - zsh
+    * zsh
     - tmux
     - any other shell dotfile
   - Clone Ultisnips repo

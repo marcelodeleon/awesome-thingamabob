@@ -1,0 +1,18 @@
+---
+# Dotfiles configuration
+
+- name: Clone dotfiles repository
+  git:
+    repo: https://github.com/marcelodeleon/dotfiles.git
+    dest: "~/dotfiles"
+
+- name: Clean current .zshrc
+  file:
+    state: absent
+    path: "~/.zshrc"
+
+- name: Sym linking .zshrc
+  file:
+    src: "~/dotfiles/zsh/zshrc"
+    dest: "~/.zshrc"
+    state: link
