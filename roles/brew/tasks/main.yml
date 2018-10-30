@@ -38,6 +38,7 @@
     - tree
     - python2
     - gnupg
+    - zsh
     - antigen
     - neovim
     - tmux
