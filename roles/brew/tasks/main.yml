@@ -36,12 +36,15 @@
   homebrew: name={{ item }} state=present
   with_items:
     - tree
-    - python2
+    - python
     - gnupg
     - zsh
     - antigen
     - neovim
     - tmux
+
+- name: Install neovim library with pip
+  pip: name: neovim
 
 - name: Install packages from Homebrew Cask
   ignore_errors: yes

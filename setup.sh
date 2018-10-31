@@ -26,6 +26,7 @@ echo "================================================="
 echo "Starting the configuration of Awesome Thingamabob"
 echo "================================================="
 
+brew install python
 sudo easy_install pip
 sudo pip install ansible
 

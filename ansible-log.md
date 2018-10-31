@@ -11,6 +11,9 @@ Verify if you need to set zsh to default manually or if there's a way to automat
 - Set the Alfred hotkey to cmd+space
 - Activate the PowerPack
 
+### iTerm2
+- Alt + left is not moving back a word
+
 * Ansible Installation
   * Bootstrap installation with Bash script
 * Homebrew Playbook
@@ -19,7 +22,7 @@ Verify if you need to set zsh to default manually or if there's a way to automat
   * Neovim cask
 - Node
 - Ruby
-- Dev env
+* Dev env
   * Install zsh with antigen
   * neovim
   * tmux
@@ -31,7 +34,7 @@ Verify if you need to set zsh to default manually or if there's a way to automat
     - neovim
     * zsh
     - tmux
-    - any other shell dotfile
+    * any other shell dotfile
   - Clone Ultisnips repo
 - Things still to install
   * Alfred

@@ -2,13 +2,13 @@
 # Dotfiles configuration
 
 - name: Check if dotfiles repo exists
-  stat: path=~/dotfiles/.git
+  stat: path=~/.dotfiles/.git
   register: dotfiles_exists
 
 - name: Clone dotfiles repository
   git:
     repo: https://github.com/marcelodeleon/dotfiles.git
-    dest: "~/dotfiles"
+    dest: "~/.dotfiles"
   when: not dotfiles_exists.stat.exists
 
 - name: Clean current dotfiles
@@ -20,20 +20,29 @@
     - .bashrc
     - .bash_aliases
 
+- name: Prepare Neovim configuration folfer
+  file: path=~/.config/nvim state=directory
+
+- name: Sym linking neovim dotfile
+  file:
+    src: "~/.dotfiles/nvim/init.vim"
+    dest: "~/.config/nvim/init.vim"
+    state: link
+
 - name: Sym linking .zshrc
   file:
-    src: "~/dotfiles/zsh/zshrc"
+    src: "~/.dotfiles/zsh/zshrc"
     dest: "~/.zshrc"
     state: link
 
 - name: Sym linking .bashrc
   file:
-    src: "~/dotfiles/bash/bashrc"
+    src: "~/.dotfiles/bash/bashrc"
     dest: "~/.bashrc"
     state: link
 
 - name: Sym linking .bash_aliases
   file:
-    src: "~/dotfiles/bash/bash_aliases"
+    src: "~/.dotfiles/bash/bash_aliases"
     dest: "~/.bash_aliases"
     state: link
