@@ -1,19 +1,3 @@
-# Mac setup
-
-Before running the ansible playbook, make sure that you have git installed.
-Run ```git --version``` to check. If git is missing, Xcode will prompt an installation.
-
-## Manual configuration
-
-Verify if you need to set zsh to default manually or if there's a way to automate it with ansible.
-
-### Alfred
-- Set the Alfred hotkey to cmd+space
-- Activate the PowerPack
-
-### iTerm2
-- Alt + left is not moving back a word
-
 * Ansible Installation
   * Bootstrap installation with Bash script
 * Homebrew Playbook
@@ -29,9 +13,9 @@ Verify if you need to set zsh to default manually or if there's a way to automat
   * Antigen
 - Dotfiles
   * Clone repo
-  - Remove all cobalt2 theme configurations
+  * Remove all cobalt2 theme configurations
   - symlink dotfiles
-    - neovim
+    * neovim
     * zsh
     - tmux
     * any other shell dotfile
@@ -42,12 +26,11 @@ Verify if you need to set zsh to default manually or if there's a way to automat
   - 1Password
 - Theme!
   - Install https://draculatheme.com
-    - zsh
-    - iTerm2
-    - vim
+    * iTerm2
+    * vim
     - Slack
     - Alfred
-  - Use Powerline on prompt
+  * Install spaceship prompt for zsh: https://github.com/denysdovhan/spaceship-prompt
   - FiraCode patched fonts
 
 

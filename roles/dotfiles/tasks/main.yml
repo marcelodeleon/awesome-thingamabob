@@ -29,6 +29,15 @@
     dest: "~/.config/nvim/init.vim"
     state: link
 
+- name: Prepare Dracula theme folder for vim
+  file: path=~/.vim/colors state=directory
+
+- name: Sym linking dracula.vim
+  file:
+    src: "~/.dotfiles/nvim/colors/dracula.vim"
+    dest: "~/.vim/colors/dracula.vim"
+    state: link
+
 - name: Sym linking .zshrc
   file:
     src: "~/.dotfiles/zsh/zshrc"

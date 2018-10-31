@@ -43,9 +43,6 @@
     - neovim
     - tmux
 
-- name: Install neovim library with pip
-  pip: name: neovim
-
 - name: Install packages from Homebrew Cask
   ignore_errors: yes
   homebrew_cask: name={{ item }} state=present
