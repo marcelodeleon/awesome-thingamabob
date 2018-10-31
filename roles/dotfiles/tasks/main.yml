@@ -1,18 +1,39 @@
 ---
 # Dotfiles configuration
 
+- name: Check if dotfiles repo exists
+  stat: path=~/dotfiles/.git
+  register: dotfiles_exists
+
 - name: Clone dotfiles repository
   git:
     repo: https://github.com/marcelodeleon/dotfiles.git
     dest: "~/dotfiles"
+  when: not dotfiles_exists.stat.exists
 
-- name: Clean current .zshrc
+- name: Clean current dotfiles
   file:
     state: absent
-    path: "~/.zshrc"
+    path: "~/{{ item }}"
+  loop:
+    - .zshrc
+    - .bashrc
+    - .bash_aliases
 
 - name: Sym linking .zshrc
   file:
     src: "~/dotfiles/zsh/zshrc"
     dest: "~/.zshrc"
+    state: link
+
+- name: Sym linking .bashrc
+  file:
+    src: "~/dotfiles/bash/bashrc"
+    dest: "~/.bashrc"
+    state: link
+
+- name: Sym linking .bash_aliases
+  file:
+    src: "~/dotfiles/bash/bash_aliases"
+    dest: "~/.bash_aliases"
     state: link

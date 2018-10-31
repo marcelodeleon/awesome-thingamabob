@@ -5,6 +5,8 @@ Run ```git --version``` to check. If git is missing, Xcode will prompt an instal
 
 ## Manual configuration
 
+Verify if you need to set zsh to default manually or if there's a way to automate it with ansible.
+
 ### Alfred
 - Set the Alfred hotkey to cmd+space
 - Activate the PowerPack
