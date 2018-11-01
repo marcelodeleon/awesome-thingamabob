@@ -31,7 +31,7 @@
     - Slack
     - Alfred
   * Install spaceship prompt for zsh: https://github.com/denysdovhan/spaceship-prompt
-  - FiraCode patched fonts
+  * FiraCode patched fonts
 
 
 - After main installation is ready

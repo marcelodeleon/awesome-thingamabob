@@ -1,0 +1,19 @@
+---
+# Configure the theme for iTerm and Neovim.
+
+- name: Prepare Dracula theme folder for vim
+  file: path=~/.vim/colors state=directory
+
+- name: Sym linking dracula.vim
+  file:
+    src: "~/.dotfiles/nvim/colors/dracula.vim"
+    dest: "~/.vim/colors/dracula.vim"
+    state: link
+
+- name: Tap Homebrew caskroom/fonts
+  homebrew_tap:
+    tap: "caskroom/fonts"
+
+- name: Install Fura Code patched fonts
+  ignore_errors: yes
+  homebrew_cask: name=font-firacode-nerd-font state=present
