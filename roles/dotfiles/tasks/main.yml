@@ -44,6 +44,12 @@
     dest: "~/.zshrc"
     state: link
 
+- name: Sym linking .zsh_powerlevel9k_config
+  file:
+    src: "~/.dotfiles/zsh/zsh_powerlevel9k_config"
+    dest: "~/.zsh_powerlevel9k_config"
+    state: link
+
 - name: Sym linking .bashrc
   file:
     src: "~/.dotfiles/bash/bashrc"
