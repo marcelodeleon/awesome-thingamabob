@@ -61,3 +61,9 @@
     src: "~/.dotfiles/bash/bash_aliases"
     dest: "~/.bash_aliases"
     state: link
+
+- name: Sym linking .tmux.conf
+  file:
+    src: "~/.dotfiles/tmux/.tmux.conf"
+    dest: "~/.tmux.conf"
+    state: link
